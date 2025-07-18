@@ -1,7 +1,7 @@
 FROM n8nio/n8n:latest
 
-# Copy your environment variables
-COPY .env /home/node/.env
+# Set working directory
+WORKDIR /home/node/
 
-# Start n8n
-CMD ["n8n"]
+# Copy .env for environment variables
+COPY .env .env
